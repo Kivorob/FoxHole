@@ -1,0 +1,20 @@
+._bg {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    background: rgba(224, 216, 216, 0.89);
+}
+
+.container {
+    width: 1210px;
+}
+
+.navmenu {
+    height: 55px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
