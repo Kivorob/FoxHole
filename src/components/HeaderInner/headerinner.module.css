@@ -1,0 +1,35 @@
+._bg {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    background: #f1f0f0;
+}
+
+.container {
+    width: 1210px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerinner {
+    height: 100px;
+
+}
+
+.logo {
+    width: 150px;
+    height: 100px;
+}
+
+.searchline {
+
+}
+
+.headericons {
+    display: flex;
+    flex-direction: row;
+
+}
