@@ -11,8 +11,8 @@ const HeaderInner = () => {
                 </div>
                 <div className={styles.searchline}>
                     <form action="" method="GET">
-                        <input type="search" name="" placeholder="Найти на сайте"/>
-                        <button type="submit">Поиск</button>
+                        <input type="search" name="" placeholder="Найти на сайте" className={styles.search_input}/>
+                        <button type="submit" className={styles.search_button}>Поиск</button>
                     </form>
                 </div>
                 <div className={styles.headericons}>
