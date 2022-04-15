@@ -6,7 +6,7 @@ import HeaderInner from "./components/HeaderInner/HeaderInner";
 const App = () => {
     return (
         <div className="app">
-          <EnterLine/>,
+          <EnterLine/>
             <HeaderInner/>
         </div>
     );
