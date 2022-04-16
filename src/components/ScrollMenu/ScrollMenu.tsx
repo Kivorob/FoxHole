@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState, useRef, useEffect} from "react";
 import debounce from "lodash.debounce"
-import classNames from "classnames"
+import cn from "classnames"
 import styles from "./scrollmenu.module.css";
 import Add1 from "../../img/Add1.jpg";
 import Add2 from "../../img/Add2.jpeg";
@@ -24,6 +24,9 @@ export const ScrollMenu = () => {
 
     const debounceCheckForScrollPosition = debounce(checkForScrollPosition, 200);
 
+    const btnLeft = styles.btn + ' ' + styles.buttonLeft + ' ' + styles.buttonHidden;
+    const btnRight = styles.btn + ' ' + styles.buttonRight + ' ' + styles.buttonHidden;
+
     const scrollContainerBy = (distance: number) =>
         listRef.current?.scrollBy({left: distance, behavior: "smooth"});
 
@@ -45,10 +48,11 @@ export const ScrollMenu = () => {
                     <button
                         type="button"
                         disabled={!canScrollLeft}
-                        onClick={() => scrollContainerBy(-1210)}
-                        className={classNames("button", "buttonLeft", {
-                            "button--hidden": !canScrollLeft
-                        })}
+                        onClick={() => scrollContainerBy(-1200)}
+                        // className={cn("btn", "buttonLeft", {
+                        //     "button--hidden": !canScrollLeft
+                        // })}
+                        className={btnLeft}
                     >
                         ←
                     </button>
@@ -60,10 +64,11 @@ export const ScrollMenu = () => {
                     <button
                         type="button"
                         disabled={!canScrollRight}
-                        onClick={() => scrollContainerBy(1210)}
-                        className={classNames("button", "buttonRight", {
-                            "button--hidden": !canScrollRight
-                        })}
+                        onClick={() => scrollContainerBy(1200)}
+                        // className={cn("btn", "buttonRight", {
+                        //     "button--hidden": !canScrollRight
+                        // })}
+                        className={btnRight}
                     >
                         →
                     </button>

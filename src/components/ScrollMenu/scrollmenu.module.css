@@ -6,11 +6,11 @@
 }
 
 .container {
-    width: 1210px;
+    width: 1200px;
 }
 
 .scrmenu {
-    height: 1500px;
+    height: 440px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -18,7 +18,8 @@
     position: relative;
 }
 
-.button {
+.btn {
+    transition: opacity 0.5s;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -27,25 +28,29 @@
     border-radius: 50%;
     border: none;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    box-shadow: 0 0 10px -3px rgb(0, 0, 0);
     font-size: 1.2rem;
     cursor: pointer;
     z-index: 2;
-
+    opacity: 0.7;
 }
 
 .buttonLeft {
-    left: -1210px;
+    left: 5px;
 }
 
 .buttonRight {
-    right: -1210px;
+    right: 5px;
 }
 
 .button--hidden {
     display: none;
 }
-
+.btn:disabled {
+    opacity: 0;
+    cursor: default;
+    transition: opacity 0.5s;
+}
 .shadowWrapper {
     width: 30px;
     height: 100%;

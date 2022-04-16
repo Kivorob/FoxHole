@@ -4,8 +4,16 @@
     justify-content: center;
     flex: 1 1 auto;
     background: #f1f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    opacity: 0.8;
+    transition: opacity 0.1s;
 }
-
+._bg:hover {
+    opacity: 1;
+    transition: opacity 0.1s;
+}
 .container {
     width: 1210px;
     display: flex;
@@ -22,9 +30,11 @@
 .logo {
     width: 150px;
     height: 100px;
+    opacity: 1;
 }
 
 .searchline {
+    opacity: 1;
     display: flex;
     align-items: center;
     border-radius: 15px;
