@@ -1,0 +1,41 @@
+._bg {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    background: white;
+}
+
+.container {
+    width: 1210px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    width: 385px;
+    height: 680px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card img {
+    width: 391px;
+    height: 514px;
+    margin-bottom: 18px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.slogan {
+    font-size: 18px;
+    color: lightsteelblue;
+}

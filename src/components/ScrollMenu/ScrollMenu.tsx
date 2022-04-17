@@ -64,7 +64,7 @@ export const ScrollMenu = () => {
                     <button
                         type="button"
                         disabled={!canScrollLeft}
-                        onClick={() => scrollContainerBy(-1200)}
+                        onClick={() => scrollContainerBy(-1210)}
                         // disabled={srcleft}
                         // onClick={() => left(-1200)}
                         // className={cn("btn", "buttonLeft", {
@@ -75,14 +75,14 @@ export const ScrollMenu = () => {
                         ←
                     </button>
                     <ul className={styles.list} ref={listRef}>
-                        <li className="item"><img src={Add1} alt="1 картинка"/></li>
-                        <li className="item"><img src={Add2} alt="2 картинка"/></li>
-                        <li className="item"><img src={Add3} alt="3 картинка"/></li>
+                        <li className="item"><img className={styles.poster} src={Add1} alt="1 картинка"/></li>
+                        <li className="item"><img className={styles.poster} src={Add2} alt="2 картинка"/></li>
+                        <li className="item"><img className={styles.poster} src={Add3} alt="3 картинка"/></li>
                     </ul>
                     <button
                         type="button"
                         disabled={!canScrollRight}
-                        onClick={() => scrollContainerBy(1200)}
+                        onClick={() => scrollContainerBy(1210)}
                         // disabled={srcright}
                         // onClick={() => right(1200)}
                         // className={cn("btn", "buttonRight", {

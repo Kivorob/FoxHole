@@ -3,10 +3,11 @@
     display: flex;
     justify-content: center;
     flex: 1 1 auto;
+    margin-bottom: 80px;
 }
 
 .container {
-    width: 1200px;
+    width: 1210px;
 }
 
 .scrmenu {
@@ -114,4 +115,8 @@
 
 .item:not(:last-child) {
     margin-right: 1em;
+}
+
+.poster {
+    width: 1210px;
 }
