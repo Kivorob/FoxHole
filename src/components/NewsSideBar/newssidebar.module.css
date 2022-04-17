@@ -32,10 +32,14 @@
 
 .title {
     font-size: 36px;
+    font-family: 'Mulish', sans-serif;
     font-weight: bold;
 }
 
 .slogan {
     font-size: 18px;
-    color: lightsteelblue;
+    font-family: 'Mulish', sans-serif;
+    font-style: italic;
+    color: #555555;
+    text-align: center;
 }

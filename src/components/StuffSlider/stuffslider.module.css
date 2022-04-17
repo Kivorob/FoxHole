@@ -60,7 +60,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    padding: 20px 0;
+    padding: 20px 30px;
 }
 .cardImg {
     width: 320px;
@@ -69,12 +69,16 @@
 .cardUnderline {
     display: flex;
     justify-content: space-between;
-    width: 300px;
+    width: 100%;
 }
 .cardName {
-    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    align-self: self-start;
 }
 .cardCost {
+    font-family: 'Source Code Pro', monospace;
     font-size: 24px;
     font-weight: bold;
 }
