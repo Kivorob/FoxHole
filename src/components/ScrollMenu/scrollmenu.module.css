@@ -47,7 +47,8 @@
     display: none;
 }
 .btn:disabled {
-    opacity: 0;
+    opacity: 0.1;
+    background-color: gray;
     cursor: default;
     transition: opacity 0.5s;
 }
