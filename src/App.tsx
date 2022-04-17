@@ -6,6 +6,7 @@ import NavigationMenu from "./components/NavigationMenu/NavigationMenu";
 import ScrollMenu from "./components/ScrollMenu/ScrollMenu";
 import Footer from "./components/Footer/Footer";
 import NewsSideBar from "./components/NewsSideBar/NewsSideBar";
+import StuffSlider from "./components/StuffSlider/StuffSlider";
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
             <NavigationMenu/>
             <ScrollMenu/>
             <NewsSideBar/>
+            <StuffSlider/>
             <Footer/>
         </div>
     );

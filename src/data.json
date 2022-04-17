@@ -1,0 +1,14 @@
+{
+  "card1": "../../img/card1.jpg",
+  "description1": "Glasses1",
+  "price1": "1000",
+  "card2": "../../img/card2.jpg",
+  "description2": "Glasses2",
+  "price2": "2000",
+  "card3": "../../img/card3.jpg",
+  "description3": "Glasses3",
+  "price3": "3000",
+  "card4": "../../img/card4.jpg",
+  "description4": "Glasses4",
+  "price4": "4000"
+}
