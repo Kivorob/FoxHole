@@ -10,10 +10,12 @@
     opacity: 0.8;
     transition: opacity 0.1s;
 }
+
 ._bg:hover {
     opacity: 1;
     transition: opacity 0.1s;
 }
+
 .container {
     width: 1210px;
     display: flex;
@@ -23,13 +25,12 @@
 }
 
 .headerinner {
-    height: 100px;
-
+    height: 80px;
 }
 
 .logo {
-    width: 150px;
-    height: 100px;
+    width: 100px;
+    height: 80px;
     opacity: 1;
 }
 
@@ -78,5 +79,4 @@ input[type="search"]::-webkit-search-results-decoration {
 .headericons {
     display: flex;
     flex-direction: row;
-
 }
