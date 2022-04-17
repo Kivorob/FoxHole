@@ -3,17 +3,18 @@ import Popup from 'reactjs-popup'; //npm install reactjs-popup --save
 import 'reactjs-popup/dist/index.css';
 import styles from "./headerinner.module.css"
 import Logo from "../../img/Logo.png";
-import auth from "../../img/user_img.jpg"
+import user_icon from "../../img/user_img.jpg"
 import {hover} from "@testing-library/user-event/dist/hover";
 import {Button} from "react-scroll";
 
 const contentStyle = {
     width: "600px",
-    height: "400px"
+    height: "400px",
+    borderRadius: "10px",
+    boxShadow: "0 0 20px -6px #da821d",
+    background: "#fdfbf7",
 };
-const overlayStyle = {
-
-};
+const overlayStyle = {};
 
 const HeaderInner = () => {
     return (
@@ -34,20 +35,54 @@ const HeaderInner = () => {
                 {/*        <span>Войти</span>*/}
                 {/*    </a>*/}
                 {/*</div>*/}
-                <Popup trigger={<div className={styles.headerIcons}><img src={auth} className={styles.authBtn__icon}/>
-                    <button>Войти</button>
-                </div>}
-                       modal={true}
-                       lockScroll={true}
-                       nested={true}
-                       contentStyle={contentStyle}>
-                    <div className={styles.auth}>
+                <div className={styles.headerIcons}>
+                    <div className={styles.basket}>
+                        <div className={styles.basket_icon}>
 
+                        </div>
                     </div>
-                </Popup>
+                    <Popup trigger=
+                               {<div className={styles.userIcon}>
+                                   <img src={user_icon} className={styles.authBtn__icon}/>
+                                   <button>Войти</button>
+                               </div>}
+                           modal={true}
+                           lockScroll={true}
+                           nested={true}
+                           contentStyle={contentStyle}>
+                        <div className={styles.auth}>
+                            <p className={styles.popup_title}>
+                                Вход
+                            </p>
+                            <div className={styles.popup_block}>
+                                <div className={styles.input_block}>
+                                    <input type="text" placeholder="Логин или номер телефона"
+                                           className={styles.input__item}/>
+                                </div>
+                                <div className={styles.input_block}>
+                                    <input type="text" placeholder="Пароль" className={styles.input__item}/>
+                                </div>
+                                <div className={styles.regLink}>
+                                    <p>
+                                        Нет аккаунта?
+                                    </p>
+                                    <a href='#'>
+                                        Зарегистрироваться
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={styles.loginBtn_block}>
+                            <button className={styles.loginBtn}>
+                                <a href="#">
+                                    Войти
+                                </a>
+                            </button>
+                        </div>
+                    </Popup>
+                </div>
             </div>
         </div>
-
     );
 };
 
