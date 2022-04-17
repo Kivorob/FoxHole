@@ -85,13 +85,13 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .basket {
-    width: 40px;
-    height: 40px;
-    margin-left: 5px;
-    background-color: #da821d;
+    margin-left: 10px;
 }
 
 .basket_icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
 .userIcon {
@@ -111,8 +111,10 @@ input[type="search"]::-webkit-search-results-decoration {
     margin: 0 5px;
     width: 40px;
     height: 40px;
+    box-shadow: 1px 1px 1px #1e1d1b;
     border-radius: 50%;
     background-color: #da821d;
+    cursor: pointer;
 }
 
 .auth {
@@ -165,7 +167,7 @@ input[type="search"]::-webkit-search-results-decoration {
     font-size: 16px;
 }
 
-.regLink a:hover{
+.regLink a:hover {
     color: #da821d;
 }
 
