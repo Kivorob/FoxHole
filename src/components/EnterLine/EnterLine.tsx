@@ -6,7 +6,7 @@ const EnterLine = () => {
     return (
             <div className={styles._bg}>
                 <div className={styles.container}>
-                    <div className={styles.enterline}>
+                    <div className={styles.enterLine}>
                         <p><a href="">Доставка</a></p>
                         <p><a href="">Для оптовых клиентов</a></p>
                         <p><a href="">Бонусная программа</a></p>

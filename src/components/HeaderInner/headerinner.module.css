@@ -24,7 +24,7 @@
     justify-content: space-between;
 }
 
-.headerinner {
+.headerInner {
     height: 80px;
 }
 
@@ -34,7 +34,7 @@
     opacity: 1;
 }
 
-.searchline {
+.searchLine {
     opacity: 1;
     display: flex;
     align-items: center;
@@ -76,7 +76,28 @@ input[type="search"]::-webkit-search-results-decoration {
     border-radius: 0 15px 15px 0;
 }
 
-.headericons {
+.headerIcons {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+.authBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 100px;
+    height: 20px;
+}
+
+.authBtn__icon {
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #da821d;
+}
+
+.auth {
+    /*none*/
 }
