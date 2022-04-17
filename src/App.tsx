@@ -5,7 +5,7 @@ import HeaderInner from "./components/HeaderInner/HeaderInner";
 import NavigationMenu from "./components/NavigationMenu/NavigationMenu";
 import ScrollMenu from "./components/ScrollMenu/ScrollMenu";
 import Footer from "./components/Footer/Footer";
-import RegistrationPage from "./pages/registration/RegistrationPage";
+import NewsSideBar from "./components/NewsSideBar/NewsSideBar";
 
 const App = () => {
     return (
@@ -14,11 +14,9 @@ const App = () => {
             <HeaderInner/>
             <NavigationMenu/>
             <ScrollMenu/>
-            {/*<RegistrationPage/>*/}
+            <NewsSideBar/>
             <Footer/>
         </div>
-
-
     );
 };
 
