@@ -22,7 +22,7 @@ const NewsSideBar = () => {
                         <img src={SaleCard} alt="Тут должны быть акции"/>
                         <p className={styles.title}>Акции</p>
                         <br/>
-                        <p className={styles.slogan}>Получайте нашу продукцию выго(д)вно</p>
+                        <p className={styles.slogan}>Получайте нашу продукцию выгодно</p>
                     </div>
                 </a>
 
@@ -31,7 +31,7 @@ const NewsSideBar = () => {
                         <img src={KomixCard} alt="Тут должны быть комиксы"/>
                         <p className={styles.title}>Комиксы</p>
                         <br/>
-                        <p className={styles.slogan}>Прочитай "Токийский Гуль 2" и съешь друзей</p>
+                        <p className={styles.slogan}>Прочитай "Токийский Гуль 2" и покажи друзьям</p>
                     </div>
                 </a>
 
