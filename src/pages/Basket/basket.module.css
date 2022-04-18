@@ -1,0 +1,212 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+    width: 1210px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.purchases {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 500px;
+}
+
+.purchases__itemTable {
+    width: 100%;
+    height: 430px;
+    padding: 20px 0;
+    /*border: 1px solid #707070;*/
+}
+
+.purchases__item {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    height: 100px;
+    padding: 10px 10px 10px 0;
+    border-bottom: 1px solid #dcdbdb;
+}
+
+.productImg {
+    width: 100px;
+    max-height: 100%;
+    height: 80px;
+    border: 1px solid #707070;
+}
+
+
+.product__desc {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    padding: 0 5px;
+}
+
+.product__info {
+    width: 340px;
+    height: 100%;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.product__quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    border: 1px solid #707070;
+    border-radius: 20px;
+}
+
+.quantity__decrement {
+    width: 33.333333%;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #707070;
+}
+
+.quantity__count {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 33.333333%;
+    font-family: 'Source Code Pro', monospace
+
+}
+
+.quantity__increment {
+    width: 33.333333%;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #707070;
+}
+
+.product__price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+
+.deleteProduct {
+    width: 20px;
+    height: 40px;
+    border: 1px solid #707070;
+}
+
+.purchases__info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 430px;
+    padding-left: 30px;
+
+}
+
+.purchases__table {
+    width: 100%;
+    height: 85%;
+    padding: 25px;
+    background-color: #f0f0f3;
+
+}
+
+.checkout {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    width: 100%;
+    height: 100%;
+}
+
+.checkout__info {
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    width: 100%;
+    height: 80%;
+}
+
+.checkout__btn {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    background-color: #da821d;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.Summary__title {
+    text-align: start;
+    width: 200px;
+    height: 40px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+.Summary__val {
+    text-align: end;
+    width: 200px;
+    height: 40px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.discount__title {
+    text-align: start;
+    width: 200px;
+    height: 40px;
+    border-bottom: 1px solid #707070;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.discount__val {
+    text-align: end;
+    width: 200px;
+    height: 40px;
+    border-bottom: 1px solid #707070;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.total__title {
+    text-align: start;
+    width: 200px;
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.total__val {
+    text-align: end;
+    width: 200px;
+    height: 40px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
