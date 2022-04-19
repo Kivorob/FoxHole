@@ -2,8 +2,19 @@ import React from 'react';
 import styles from "../HeaderInner/headerinner.module.css";
 import Popup from "reactjs-popup";
 import user_icon from "../../img/user_img.jpg";
+import {NavLink} from "react-router-dom";
 
-const HeaderIcons = () => {
+async function loginUser(data?: any) {
+    return fetch('http://localhost:7010/api/login', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => res.json())
+}
+
+function HeaderIcons({auth, setAuthorised, user, setUser}: {auth?: any, setAuthorised?: any, user?: any, setUser?: any}) {
     const contentStyle = {
         width: "600px",
         height: "400px",
@@ -11,6 +22,26 @@ const HeaderIcons = () => {
         boxShadow: "0 0 20px -6px #da821d",
         background: "#fdfbf7",
     };
+
+    const handleSubmit = async (event?: any) => {
+        event.preventDefault();
+        const data = {
+            login: event.target.elements.login.value,
+            password: event.target.elements.password.value
+        }
+        let token;
+        token = await loginUser(data).catch(err => token = {token: 'token'});
+        if (token.token !== 'error') {
+            console.log(token);
+            auth = true;
+            setAuthorised(auth);
+            user = token.user;
+            setUser(user);
+            localStorage.setItem('token', token.token);
+            console.log(localStorage.getItem("token"));
+        }
+    }
+
     return (
         <div className={styles.headerIcons}>
             <div className={styles.basket}>
@@ -33,7 +64,7 @@ const HeaderIcons = () => {
                    lockScroll={true}
                    nested={true}
                    contentStyle={contentStyle}>
-                <div className={styles.auth}>
+                <form onSubmit={handleSubmit} className={styles.auth}>
                     <p className={styles.popup_title}>
                         Вход
                     </p>
@@ -45,26 +76,24 @@ const HeaderIcons = () => {
                         <div className={styles.input_block}>
                             <input type="text" placeholder="Пароль" className={styles.input__item}/>
                         </div>
-                        <div className={styles.regLink}>
-                            <p>
-                                Нет аккаунта?
-                            </p>
-                            <a href='#'>
-                                Зарегистрироваться
-                            </a>
-                        </div>
                     </div>
-                </div>
-                <div className={styles.loginBtn_block}>
-                    <button className={styles.loginBtn}>
-                        <a href="#">
-                            Войти
-                        </a>
-                    </button>
+                    <div className={styles.loginBtn_block}>
+                        <button className={styles.loginBtn}>
+                            <a href="#">
+                                Войти
+                            </a>
+                        </button>
+                    </div>
+                </form>
+                <div className={styles.regLink}>
+                    <p>
+                        Нет аккаунта?
+                    </p>
+                    <NavLink to={'/registration'}>Зарегистрироваться</NavLink>
                 </div>
             </Popup>
         </div>
     );
-};
+}
 
 export default HeaderIcons;

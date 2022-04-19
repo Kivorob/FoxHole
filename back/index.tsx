@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import postRouter from "./api/createUser"
-import getUserFromToken from "./api/getUser";
+import getUserFromToken from "./api/getUserFromToken";
 import loginUser from "./api/loginUser";
 import createUser from "./api/createUser";
 import userRouter from "./api/getUser"
@@ -25,9 +25,10 @@ mongoose.connect(url).then(res => console.log("БД АРБАЙТАЕТ"))
 app.use('/api/post', postRouter);
 app.use('/api/verify', getUserFromToken);
 app.use('/api/login', loginUser);
-app.use('/api/register', createUser);
+app.use('/api/registration', createUser);
 app.use('/api/user', userRouter);
-app.use('/api.search', searchRouter);
+app.use('/api/search', searchRouter);
+
 
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`)

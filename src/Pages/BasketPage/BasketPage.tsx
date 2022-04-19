@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./basket.module.css"
 
-const Basket = () => {
+const BasketPage = () => {
     return (
         <div className={styles.container}>
             <div className={styles.purchases}>
@@ -57,4 +57,4 @@ const Basket = () => {
     );
 };
 
-export default Basket;
+export default BasketPage;

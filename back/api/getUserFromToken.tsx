@@ -1,5 +1,5 @@
 import express from "express";
-import {User} from "../models/userModel";
+import {Client} from "../models/clientModel";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 
@@ -16,7 +16,7 @@ router.post('/', (req: Request, res: any) => {
     // @ts-ignore
         const login = user.login;
     if (user) {
-        User.findOne({login: login}, async (err?: any, user?: any) => {
+        Client.findOne({login: login}, async (err?: any, user?: any) => {
             if (err) {
                 res.status(500).send('Server error');
             } else if (!user) {

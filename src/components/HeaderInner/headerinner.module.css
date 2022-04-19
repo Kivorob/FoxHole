@@ -214,3 +214,9 @@ input[type="search"]::-webkit-search-results-decoration {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
+
+.regLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

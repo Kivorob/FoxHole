@@ -1,7 +1,6 @@
 import React from 'react';
 import {useState, useRef, useEffect} from "react";
 import debounce from "lodash.debounce"
-import cn from "classnames"
 import styles from "./scrollmenu.module.css";
 import Add1 from "../../img/Add1.jpg";
 import Add2 from "../../img/Add2.jpeg";

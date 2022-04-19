@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema ({
+const ClientSchema = new Schema ({
     login: {type: String, unique: true},
     telephone: String,
     hashedPassword: String,
@@ -10,4 +10,4 @@ const UserSchema = new Schema ({
     regDate: {type: Date, default: Date.now}
 })
 
-export const User = mongoose.model('user', UserSchema);
+export const Client = mongoose.model('client', ClientSchema);

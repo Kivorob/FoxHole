@@ -1,5 +1,5 @@
 import express from "express"
-import {User} from "../models/userModel";
+import {Client} from "../models/clientModel";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
@@ -15,8 +15,8 @@ router.post('/', async (req, res) => {
     const salt = await bcrypt.genSalt(saltRounds);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    let user = new User({login: login, telephone: telephone, hashedPassword: hashedPassword});
-    user.save((err?:any) => {
+    let user = new Client({login: login, telephone: telephone, hashedPassword: hashedPassword});
+    user.save((err?: any) => {
         if (err) {
             console.log(err);
             res.status(500).send("Ошибка при регистрации, попробуйте ещё раз.")
@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
             const payload = {login};
             // @ts-ignore
             const token = jwt.sign(payload, secret,{'expiresIn': '12h'});
-            res.status(200).json({token, 'user': user});
+            res.status(200).json({'token': token, 'user': user});
         }
     });
 });
