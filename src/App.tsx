@@ -63,7 +63,7 @@ function App() {
             <div className="app">
                 <Routes>
                     <Route path="/registration" element={<RegistrationPage setUser={setUser} setAuthorised={setAuth}/>}/>
-                    <Route path="/home" element={<HomePage/>}/>
+                    <Route path="/" element={<HomePage/>}/>
                     <Route path="/basket" element={<BasketPage/>}/>
                 </Routes>
             </div>
