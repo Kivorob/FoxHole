@@ -14,7 +14,7 @@ import HomePage from "./Pages/HomePage/HomePage";
 import RegistrationPage from "./Pages/registration/RegistrationPage";
 import BasketPage from "./Pages/BasketPage/BasketPage";
 import RequireUnauth from "./components/RequireAuth/RequireUnauth";
-import RecuireAuth from "./components/RequireAuth/RecuireAuth";
+import RequireAuth from "./components/RequireAuth/RecuireAuth";
 
 
 const defaultUser = {
@@ -62,8 +62,7 @@ function App() {
         <Router>
             <div className="app">
                 <Routes>
-                    <Route path="/registration" element={
-                        <RegistrationPage setUser={setUser} setAuthorised={setAuth}/>}/>
+                    <Route path="/registration" element={<RegistrationPage setUser={setUser} setAuthorised={setAuth}/>}/>
                     <Route path="/home" element={<HomePage/>}/>
                     <Route path="/basket" element={<BasketPage/>}/>
                 </Routes>

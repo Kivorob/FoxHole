@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 
 async function saveUser(data?: any) {
-    return fetch('http://localhost:7010/api/register', {
+    return fetch('http://localhost:7010/api/registration', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -45,19 +45,19 @@ function RegistrationPage({auth, user, setUser, setAuthorised}: {auth?: any, set
                         </div>
                         <form onSubmit={onSubmit} className={styles.input_block}>
                             <div className={styles.input}>
-                                <input type="text" placeholder="Логин" className={styles.input__item}/>
+                                <input id="login" type="text" placeholder="Логин" className={styles.input__item}/>
                             </div>
                             <div className={styles.input}>
-                                <input type="tel" placeholder="Телефон" className={styles.input__item}/>
+                                <input id="telephone" type="tel" placeholder="Телефон" className={styles.input__item}/>
                             </div>
                             <div className={styles.input}>
-                                <input type="password" placeholder="Пароль" className={styles.input__item}/>
+                                <input id="password" type="password" placeholder="Пароль" className={styles.input__item}/>
                             </div>
                             <div className={styles.input}>
-                                <input type="password" placeholder="Повторите пароль" className={styles.input__item}/>
+                                <input id="secondPassword" type="password" placeholder="Повторите пароль" className={styles.input__item}/>
                             </div>
                             <div className={styles.authBtn__block}>
-                                <button className={styles.authBtn}>
+                                <button type="submit" className={styles.authBtn}>
                                     Зарегистрироваться
                                 </button>
                             </div>

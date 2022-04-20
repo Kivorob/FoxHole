@@ -7,7 +7,7 @@ function RequireUnauth(props?: any) {
 
     if (auth) {
         // @ts-ignore
-        return <Navigate to="/home"/>;
+        return <Navigate to="/basket"/>;
     }
 
     return React.cloneElement(children, {auth: auth, setAuthorised: setAuthorised, user: user});

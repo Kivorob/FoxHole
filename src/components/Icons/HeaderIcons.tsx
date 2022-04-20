@@ -25,6 +25,7 @@ function HeaderIcons({auth, setAuthorised, user, setUser}: {auth?: any, setAutho
 
     const handleSubmit = async (event?: any) => {
         event.preventDefault();
+        console.log(event);
         const data = {
             login: event.target.elements.login.value,
             password: event.target.elements.password.value
@@ -70,18 +71,16 @@ function HeaderIcons({auth, setAuthorised, user, setUser}: {auth?: any, setAutho
                     </p>
                     <div className={styles.popup_block}>
                         <div className={styles.input_block}>
-                            <input type="text" placeholder="Логин или номер телефона"
+                            <input id="login" type="text" placeholder="Логин или номер телефона"
                                    className={styles.input__item}/>
                         </div>
                         <div className={styles.input_block}>
-                            <input type="text" placeholder="Пароль" className={styles.input__item}/>
+                            <input id="password" type="text" placeholder="Пароль" className={styles.input__item}/>
                         </div>
                     </div>
                     <div className={styles.loginBtn_block}>
-                        <button className={styles.loginBtn}>
-                            <a href="#">
-                                Войти
-                            </a>
+                        <button type="submit" className={styles.loginBtn}>
+                            Войти
                         </button>
                     </div>
                 </form>
