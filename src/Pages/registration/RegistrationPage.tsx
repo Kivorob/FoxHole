@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from "./registration.module.css"
 import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
+
 
 
 async function saveUser(data?: any) {
@@ -16,7 +18,7 @@ async function saveUser(data?: any) {
 function RegistrationPage({auth, user, setUser, setAuthorised}: {auth?: any, setAuthorised?: any, user?: any, setUser?: any}) {
     const  onSubmit = async  (event?: any) => {
         event.preventDefault();
-        const data ={
+        const data = {
             login: event.target.elements.login.value,
             telephone: event.target.elements.telephone.value,
             password: event.target.elements.password.value,
@@ -61,13 +63,13 @@ function RegistrationPage({auth, user, setUser, setAuthorised}: {auth?: any, set
                                     Зарегистрироваться
                                 </button>
                             </div>
-                            <NavLink to={'/home'}>На главную</NavLink>
+                                <Link to={'/'}>На главную</Link>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     );
-};
+}
 
 export default RegistrationPage;

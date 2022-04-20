@@ -4,7 +4,7 @@ import React from "react";
 function RequireAuth(props?: any) {
     let {children, auth, setAuthorised, user} = props;
     if (!auth) {
-        return <Navigate to="/home"/>;
+        return <Navigate to="/"/>;
     }
 
     return React.cloneElement(children, {auth: auth, setAuthorised: setAuthorised, user: user});
